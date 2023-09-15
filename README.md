@@ -1,1 +1,1 @@
-printf projecr
+printf project
