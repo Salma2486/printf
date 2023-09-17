@@ -7,6 +7,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int h = 0, r_value = 0;
+	int r_val;
 	va_list args;
 
 	va_start(args, format);
@@ -27,7 +28,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[h + 1] == 's')
 		{
-			int r_val = _puts(va_arg(args, char *));
+			r_val = _puts(va_arg(args, char *));
 
 			h++;
 			r_value += (r_val - 1);
