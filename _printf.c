@@ -29,8 +29,6 @@ int _printf(const char *format, ...)
 		{
 			int r_val = put_s(va_arg(args, char *));
 
-			if (!va_arg(args, char *))
-				return (-1)
 			h++;
 			r_value += (r_val - 1);
 		}
