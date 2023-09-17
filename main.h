@@ -4,9 +4,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <string.h>
-#include <limits.h>
-#include <stdlib>
 
 int _printf(const char *format, ...);
 int putchr(char z);
