@@ -33,8 +33,7 @@ int _printf(const char *format, ...)
 		{
 			putchr('%');
 			h++; }
-		r_value += 1;
-	}
+		r_value += 1; }
 	va_end(args);
 	return (r_value);
 }
