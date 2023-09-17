@@ -8,10 +8,13 @@ int _puts(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	if (str)
 	{
-		putchar(str[i]);
-		i++;
+		while (str[i] != '\0')
+		{
+			putchar(str[i]);
+			i++;
+		}
 	}
 	return (0);
 }
