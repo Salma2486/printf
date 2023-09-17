@@ -1,22 +1,17 @@
 #include "main.h"
 /**
- * put_s - adwwadawda
- * @string:dawdadaw
- * Return: r_val
+ * _puts - adwwadawda
+ * @str:dawdadaw
+ * Return: 0
  */
-int put_s(char *string)
+int _puts(char *str)
 {
 	int i = 0;
 
-	if (string)
+	while (str[i] != '\0')
 	{
-		while (string[idx] != '\0')
-		{
-			putchr(string[i]);
-			i++;
-		}
+		putchar(str[i]);
+		i++;
 	}
 	return (0);
-	else
-		return (-1);
 }

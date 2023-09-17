@@ -7,6 +7,6 @@
 
 int _printf(const char *format, ...);
 int putchr(char z);
-int put_s(char *string);
+int _puts(char *string);
 void get_int(int num);
 #endif
