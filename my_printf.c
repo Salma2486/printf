@@ -33,9 +33,9 @@ int _printf(const char *format, ...)
 		{
 			c = va_arg(args, char *);
 			write(1, c, strlen(c));
-			r_val = strlen(c) - 1;
+			r_val = strlen(c);
 			h++;
-			r_value += (r_val - 1);
+			r_value += r_val;
 		}
 		else if (format[h + 1] == '%')
 		{
