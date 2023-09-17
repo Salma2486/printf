@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[h + 1] == '%')
 		{
-			putchr('%');
+			iputchr('%');
 			h++;
 		}
 		r_value += 1;
