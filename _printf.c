@@ -37,8 +37,13 @@ int _printf(const char *format, ...)
 			putchr('%');
 			h++;
 		}
+		else
+		{
+		    putchr('%');
+		    putchr(format[h + 1]);
+		    h++;
+		}
 		r_value += 1;
 	}
-	va_end(args);
 	return (r_value);
 }
