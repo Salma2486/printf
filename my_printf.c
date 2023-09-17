@@ -1,41 +1,45 @@
 #include "main.h"
 /**
- *_printf - dawdawda
- *@format:dawdawd
- *Return: r_value
+ *_printf - dawddw
+ *@format:dwadwa
+ *Return:dwad
  */
 int _printf(const char *format, ...)
 {
 	unsigned int h = 0, r_value = 0;
+	int r_val;
+	char *c;
 	va_list args;
 
 	va_start(args, format);
+
+	if (!format || (format[h] == '%' && !format[h + 1]))
+		return (-1);
+	if (!format[h])
+		return (0);
 	for ( ; format[h] != '\0' ; h++)
 	{
 		if (format[h] != '%')
 		{
-			putchr(format[h]);
+			write(1, &format[h], 1);
 		}
 		else if (format[h + 1] == 'c')
 		{
-			putchr(va_arg(args, int));
+			c = va_arg(args, char *);
+			write(1, &c, 1);
 			h++;
 		}
 		else if (format[h + 1] == 's')
 		{
-			int r_val = put_s(va_arg(args, char *));
-
+			c = va_arg(args, char *);
+			write(1, c, strlen(c));
+			r_val = strlen(c) - 1;
 			h++;
 			r_value += (r_val - 1);
 		}
 		else if (format[h + 1] == '%')
 		{
-			putchr('%');
-			h++;
-		}
-		else if ((format[h + 1] == 'd') || (format[h + 1] == 'i'))
-		{
-			get_int(va_arg(args, int));
+			write(1, "%", 1);
 			h++;
 		}
 		r_value += 1;
