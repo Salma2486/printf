@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *my_printf - dawdawda
+ *_printf - dawdawda
  *@format:dawdawd
  *Return: r_value
  */
