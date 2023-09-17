@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	if (!format || (format[h] == '%' && !format[h + 1]))
 		return (-1);
 	if (!format[h])
-		return (0);
+		return (-1);
 	for ( ; format[h] != '\0' ; h++)
 	{
 		if (format[h] != '%')
