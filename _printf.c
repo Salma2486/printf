@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i;
+	unsigned long int i;
 	char *ch;
 	va_list args;
 
@@ -18,21 +18,24 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 's'){
+			if (format[i] == 's')
+			{
 				ch = va_arg(args, char *);
 				write(1, ch, strlen(ch));
 			}
-			else if (format[i] == 'c'){
+			else if (format[i] == 'c')
+			{
 				ch = va_arg(args, char*);
-				write(1, &ch , 1);
+				write(1, &ch, 1);
 			}
-			else{
-				write(1, &format[i] ,1);
-				i++;
+			else
+			{
+				write(1, &format[i], 1);
 			}
 		}
-		else{
-			write(1, &format[i] , 1);
+		else
+		{
+			write(1, &format[i], 1);
 		}
 	}
 	va_end(args);
