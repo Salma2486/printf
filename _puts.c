@@ -6,12 +6,12 @@
  */
 int _puts(char *str)
 {
-	int i = 0, b = 0;
+	int i = 0, b = 0, s;
 	char *x = "(null)";
 
 	if (!str)
 	{
-		for (int s = 0 ; s < 6 ; s++)
+		for (s = 0 ; s < 6 ; s++)
 			putchr(x[s]);
 	}
 	i = 0;

@@ -39,5 +39,6 @@ int _printf(const char *format, ...)
 		}
 		r_value += 1;
 	}
+	va_end(args);
 	return (r_value);
 }
