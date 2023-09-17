@@ -13,10 +13,12 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(args, format);
-	while (*format != '\0')
+	while (*format)
 	{
 		if (*format == '%')
 		{ format++;
+			if (*format == '\0')
+				break;
 			if (*format == 'c')
 			{ ch = va_arg(args, char *);
 				write(1, &ch, 1);
