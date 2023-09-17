@@ -28,8 +28,9 @@ int _printf(const char *format, ...)
 		else if (format[h + 1] == 's')
 		{
 			int r_val = put_s(va_arg(args, char *));
-			if (r_val == 0)
-				return (-1);
+
+			if (!va_arg(args, char *))
+				return (-1)
 			h++;
 			r_value += (r_val - 1);
 		}
