@@ -8,14 +8,15 @@ int _puts(char *str)
 {
 	int i = 0, b = 0;
 
-	if (str)
+	if (!str)
 	{
-		while (str[i] != '\0')
-		{
-			putchr(str[i]);
-			b++;
-			i++;
-		}
+		return (-1);
+	}
+	while (str[i] != '\0')
+	{
+		putchr(str[i]);
+		b++;
+		i++;
 	}
 	return (b);
 }
