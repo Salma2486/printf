@@ -9,7 +9,5 @@
 int _printf(const char *format, ...);
 int putchr(char z);
 int put_s(char *string);
-int put_int(int integer);
-int my_puts(char *string);
 void get_int(int num);
 #endif
