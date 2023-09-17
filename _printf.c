@@ -9,7 +9,6 @@ int _printf(const char *format, ...)
 	char *ch;
 	char *str;
 	va_list args;
-	int str_len = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -26,10 +25,8 @@ int _printf(const char *format, ...)
 				format++; }
 			else if (*format == 's')
 			{ str = va_arg(args, char *);
-				while (str[str_len] != '\0')
-					str_len++;
-				write(1, str, str_len);
-				format += str_len; }
+				write(1, str, strlen(str);
+				format++;}
 			else if (*format == '%')
 			{ write(1, format, 1);
 				format++; }
