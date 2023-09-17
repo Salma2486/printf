@@ -12,7 +12,7 @@ int _puts(char *str)
 	{
 		while (str[i] != '\0')
 		{
-			putchar(str[i]);
+			putchr(str[i]);
 			b++;
 			i++;
 		}
