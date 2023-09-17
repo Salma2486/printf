@@ -19,24 +19,20 @@ int _printf(const char *format, ...)
 	{
 		if (format[h] != '%')
 		{
-			putchr(format[h]);
-		}
+			putchr(format[h]); }
 		else if (format[h + 1] == 'c')
 		{
 			putchr(va_arg(args, int));
-			h++;
-		}
+			h++; }
 		else if (format[h + 1] == 's')
 		{
 			r_val = _puts(va_arg(args, char *));
 			h++;
-			r_value += (r_val - 1);
-		}
+			r_value += (r_val - 1); }
 		else if (format[h + 1] == '%')
 		{
 			putchr('%');
-			h++;
-		}
+			h++; }
 		r_value += 1;
 	}
 	va_end(args);
