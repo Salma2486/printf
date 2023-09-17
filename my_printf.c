@@ -4,7 +4,7 @@
  *@format:dawdawd
  *Return: r_value
  */
-int my_printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	unsigned int h = 0, r_value = 0;
 	va_list args;
