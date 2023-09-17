@@ -6,16 +6,17 @@
  */
 int put_s(char *string)
 {
-	int idx = 0, r_val = 0;
+	int i = 0;
 
 	if (string)
 	{
 		while (string[idx] != '\0')
 		{
-			putchr(string[idx]);
-			r_val += 1;
-			idx++;
+			putchr(string[i]);
+			i++;
 		}
 	}
-	return (r_val);
+	return (0);
+	else
+		return (-1);
 }
