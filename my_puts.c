@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * my_puts - awdwdddwwsw
+ * @string: awdada
+ * Return: r_val
+ */
 int my_puts(char *string)
 {
 	int idx = 0, r_val = 0;

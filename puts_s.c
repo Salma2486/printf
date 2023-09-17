@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * put_s - adwwadawda
+ * @string:dawdadaw
+ * Return: r_val
+ */
 int put_s(char *string)
 {
 	int idx = 0, r_val = 0;

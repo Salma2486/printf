@@ -1,34 +1,39 @@
 #include "main.h"
-
-int  my_printf(const char *format, ...)
+/**
+ *my_printf - dawdawda
+ *@format:dawdawd
+ *Return: r_value
+ */
+int my_printf(const char *format, ...)
 {
-	unsigned h = 0, r_value = 0;
+	unsigned int h = 0, r_value = 0;
 	va_list args;
-	va_start(args, format);
 
+	va_start(args, format);
 	for ( ; format[h] != '\0' ; h++)
 	{
 		if (format[h] != '%')
 		{
 			putchr(format[h]);
 		}
-		else if (format[h+1] == 'c')
+		else if (format[h + 1] == 'c')
 		{
 			putchr(va_arg(args, int));
 			h++;
 		}
-		else if (format[h+1] == 's')
+		else if (format[h + 1] == 's')
 		{
 			int r_val = put_s(va_arg(args, char *));
+
 			h++;
 			r_value += (r_val - 1);
 		}
-		else if (format[h+1] == '%')
+		else if (format[h + 1] == '%')
 		{
 			putchr('%');
 			h++;
 		}
-		else if ((format[h+1] == 'd') || (format[h+1] == 'i'))
+		else if ((format[h + 1] == 'd') || (format[h + 1] == 'i'))
 		{
 			get_int(va_arg(args, int));
 			h++;
