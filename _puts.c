@@ -16,5 +16,5 @@ int _puts(char *str)
 			i++;
 		}
 	}
-	return (0);
+	return (strlen(str));
 }
