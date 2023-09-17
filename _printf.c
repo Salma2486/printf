@@ -32,8 +32,14 @@ int _printf(const char *format, ...)
 		else if (format[h + 1] == '%')
 		{
 			putchr('%');
-			h++; }
-		r_value += 1; }
+			h++;
+		}
+		else
+		{
+			putchr('%');
+		}
+		r_value += 1;
+	}
 	va_end(args);
 	return (r_value);
 }
