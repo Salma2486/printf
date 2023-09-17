@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *_printf - This is the entry point of the code
- *@format: jnfjw
+ *@format: kjnfvj
  *Return:0 Success
  */
 int _printf(const char *format, ...)
@@ -13,19 +13,17 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(args, format);
-	while (*format)
+	while (*format != '\0')
 	{
 		if (*format == '%')
 		{ format++;
-			if (*format == '\0')
-				break;
 			if (*format == 'c')
 			{ ch = va_arg(args, char *);
 				write(1, &ch, 1);
 				format++; }
 			else if (*format == 's')
 			{ str = va_arg(args, char *);
-				write(1, str, strlen(str);
+				write(1, str, strlen(str));
 				format++; }
 			else if (*format == '%')
 			{ write(1, format, 1);
@@ -36,5 +34,5 @@ int _printf(const char *format, ...)
 			format++; }
 	}
 	va_end(args);
-	return (*format);
+	return (0);
 }
