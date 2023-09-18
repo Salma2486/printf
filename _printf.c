@@ -19,8 +19,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[h] != '%')
 			putchr(format[h]);
-		else if (format[h + 1] == '\0')
-			return (-1);
 		else if (format[h + 1] == 'c')
 		{
 			putchr(va_arg(args, int));
