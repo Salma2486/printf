@@ -44,4 +44,4 @@ int printInteger(int num)
 	}
 	buffer[index] = '\0';
 	return (_puts(buffer));
-
+}
