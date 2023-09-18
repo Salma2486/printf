@@ -10,4 +10,5 @@ int _printf(const char *format, ...);
 int putchr(char z);
 int _puts(char *string);
 char *print_int(int n);
+int printBinary(unsigned int num);
 #endif

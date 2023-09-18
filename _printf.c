@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-	for ( ; format[h] != '\0' ; h++)
+	for (; format[h] != '\0'; h++)
 	{
 		if (format[h] != '%')
 			putchr(format[h]);
@@ -28,6 +28,11 @@ int _printf(const char *format, ...)
 			r_val = _puts(va_arg(args, char *));
 			h++;
 			r_value += (r_val - 1); }
+		else if (format[h + 1] == 'b')
+		{
+			r_value += printBinary(va_arg(args, unsigned int));
+			h++;
+		}
 		else if (format[h + 1] == 'd' || format[h + 1] == 'i')
 		{
 			num = va_arg(args, int);
