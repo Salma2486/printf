@@ -38,6 +38,8 @@ int _printf(const char *format, ...)
 		{
 			putchr('%');
 			h++; }
+		else if(!format[h + 1] || format[h + 1] == ' ')
+			return (-1);
 		else
 			putchr('%');
 		r_value += 1;
