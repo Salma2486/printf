@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int h = 0, r_value = 0;
-	int r_val;
+	int r_val, num;
 	va_list args;
 
 	va_start(args, format);
@@ -18,8 +18,7 @@ int _printf(const char *format, ...)
 	for ( ; format[h] != '\0' ; h++)
 	{
 		if (format[h] != '%')
-		{
-			putchr(format[h]); }
+			putchr(format[h]);
 		else if (format[h + 1] == 'c')
 		{
 			putchr(va_arg(args, int));
@@ -29,6 +28,11 @@ int _printf(const char *format, ...)
 			r_val = _puts(va_arg(args, char *));
 			h++;
 			r_value += (r_val - 1); }
+		else if (format[h + 1] == 'd' || format[h + 1] == 'i')
+		{
+			num = va_arg(args, int);
+			_puts(print_int(num));
+			h++; }
 		else if (format[h + 1] == '%')
 		{
 			putchr('%');
