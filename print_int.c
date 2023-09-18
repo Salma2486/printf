@@ -8,6 +8,7 @@ int printInteger(int num)
 {
 	char buffer[BUFF_SIZE];
 	int index = 0;
+	int h;
 
 	if (num == 0)
 	{
@@ -34,7 +35,7 @@ int printInteger(int num)
 		{
 			buffer[index++] = '-';
 		}
-		for (int h = 0; h < index / 2; h++)
+		for (h = 0; h < index / 2; h++)
 		{
 			char temp = buffer[h];
 

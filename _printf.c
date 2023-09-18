@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int h = 0, r_value = 0;
-	int r_val, num;
+	int r_val;
 	va_list args;
 
 	va_start(args, format);
