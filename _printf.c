@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[h] != '%')
 			putchr(format[h]);
-		else if (format[i + 1] == '\0')
+		else if (format[h + 1] == '\0')
 			return (-1);
 		else if (format[h + 1] == 'c')
 		{
