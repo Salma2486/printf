@@ -40,8 +40,6 @@ int _printf(const char *format, ...)
 			h++; }
 		else
 			putchr('%');
-		else if (!format[h + 1] || format[h + 1] == ' ')
-			return (-1);
 		r_value += 1;
 	}
 	va_end(args);
