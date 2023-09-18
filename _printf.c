@@ -17,8 +17,6 @@ int _printf(const char *format, ...)
 		return (-1);
 	for ( ; format[h] != '\0' ; h++)
 	{
-		if (!format[h + 1] || format[h + 1] == ' ')
-			return (-1);
 		if (format[h] != '%')
 			putchr(format[h]);
 		else if (format[h + 1] == 'c')
