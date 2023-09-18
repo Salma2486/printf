@@ -9,5 +9,5 @@
 int _printf(const char *format, ...);
 int putchr(char z);
 int _puts(char *string);
-int printInteger(int num);
+char *print_int(int n);
 #endif
