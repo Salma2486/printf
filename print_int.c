@@ -36,7 +36,7 @@ char *print_int(int n)
 			str[i] = '0' + (n % 10);
 			n /= 10;
 		}
-		for (int j = 0; j < i / 2; j++)
+		for (j = 0; j < i / 2; j++)
 		{
 			temp = str[j];
 			str[j] = str[i - j - 1];
