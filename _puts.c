@@ -14,7 +14,6 @@ int _puts(char *str)
 		for (s = 0 ; s < 6 ; s++)
 			putchr(x[s]);
 	}
-	i = 0;
 	while (str[i] != '\0')
 	{
 		putchr(str[i]);

@@ -1,48 +1,47 @@
 #include "main.h"
 /**
- * *print_int - dwdwd
- * @n: wadadwadd
- * Return: str
+ *printInteger - dwdwd
+ *@num: wadadwadd
+ *Return: str
  */
-char *print_int(int n)
+int printInteger(int num)
 {
-	static char str[BUFF_SIZE], temp;
-	int i, j;
+	char buffer[BUFF_SIZE];
+	int index = 0;
 
-	memset(str, 0, sizeof(str));
-	if (n == 0)
-		putchr('0');
-	if (n < 0)
+	if (num == 0)
 	{
-		str[0] = '-';
-		n = -n;
-		for (i = 1; n > 0; i++)
-		{
-			str[i] = '0' + (n % 10);
-			n /= 10;
-		}
-		i = i + 1;
-		for (j = 1; j < i / 2; j++)
-		{
-			temp = str[j];
-			str[j] = str[i - j - 1];
-			str[i - j - 1] = temp;
-		}
+		buffer[index++] = '0';
 	}
 	else
 	{
-		for (i = 0; n > 0; i++)
+		bool isNegative = false;
+
+		if (num < 0)
 		{
-			str[i] = '0' + (n % 10);
-			n /= 10;
+			isNegative = true;
+			num = -num;
 		}
-		for (j = 0; j < i / 2; j++)
+		while (num > 0)
 		{
-			temp = str[j];
-			str[j] = str[i - j - 1];
-			str[i - j - 1] = temp;
+			int digit = num % 10;
+
+			buffer[index++] = '0' + digit;
+			num /= 10;
+		}
+
+		if (isNegative)
+		{
+			buffer[index++] = '-';
+		}
+		for (int h = 0; h < index / 2; h++)
+		{
+			char temp = buffer[h];
+
+			buffer[h] = buffer[index - 1 - h];
+			buffer[index - 1 - h] = temp;
 		}
 	}
-	str[i] = '\0';
-	return (str);
-}
+	buffer[index] = '\0';
+	return (_puts(buffer));
+

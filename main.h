@@ -5,9 +5,9 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <string.h>
-
+#include <stdbool.h>
 int _printf(const char *format, ...);
 int putchr(char z);
 int _puts(char *string);
-char *print_int(int n);
+int printInteger(int num);
 #endif

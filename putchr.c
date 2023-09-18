@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * putchr - write
- * @z:adwww
- * Return:write
+ *putchr - write
+ *@z: adwww
+ *Return: write
  */
 int putchr(char z)
 {

@@ -30,20 +30,19 @@ int _printf(const char *format, ...)
 			r_value += (r_val - 1); }
 		else if (format[h + 1] == 'd' || format[h + 1] == 'i')
 		{
-			num = va_arg(args, int);
-			_puts(print_int(num));
+			int num = va_arg(args, int);
+			int r_val = printInteger(num);
+
+			r_value += r_val;
 			h++; }
 		else if (format[h + 1] == '%')
 		{
 			putchr('%');
-			h++;
-		}
+			h++; }
 		else
 		{
-			putchr('%');
-		}
-		r_value += 1;
-	}
+			putchr('%'); }
+		r_value += 1; }
 	va_end(args);
 	return (r_value);
 }
