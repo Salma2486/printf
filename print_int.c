@@ -11,7 +11,10 @@ char *print_int(int n)
 
 	memset(str, 0, sizeof(str));
 	if (n == 0)
-		putchr('0');
+	{
+		str[0] = '0';
+		str[1] = '\0';
+		return (str); }
 	if (n < 0)
 	{
 		str[0] = '-';
@@ -19,16 +22,13 @@ char *print_int(int n)
 		for (i = 1; n > 0; i++)
 		{
 			str[i] = '0' + (n % 10);
-			n /= 10;
-		}
+			n /= 10; }
 		i = i + 1;
 		for (j = 1; j < i / 2; j++)
 		{
 			temp = str[j];
 			str[j] = str[i - j - 1];
-			str[i - j - 1] = temp;
-		}
-	}
+			str[i - j - 1] = temp; } }
 	else
 	{
 		for (i = 0; n > 0; i++)
@@ -41,8 +41,7 @@ char *print_int(int n)
 			temp = str[j];
 			str[j] = str[i - j - 1];
 			str[i - j - 1] = temp;
-		}
-	}
+		} }
 	str[i] = '\0';
 	return (str);
 }

@@ -10,10 +10,10 @@ int handle_format(const char *format, va_list args)
 	unsigned int h = 0, r_value = 0;
 	int r_val, num;
 
-	if (!format || (format[h] == '%' && !format[h + 1]))
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	if (!format[h])
-		return (-1);
+	if (!format[0])
+		return (0);
 	for (; format[h] != '\0'; h++)
 	{
 		if (format[h] != '%')
