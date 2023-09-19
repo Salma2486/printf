@@ -6,7 +6,7 @@
  */
 char *print_int(int n)
 {
-	static char str[BUFF_SIZE];
+	static char buffer[BUFF_SIZE];
 
 	sprintf(buffer, "%d", n);
 	return (buffer);
