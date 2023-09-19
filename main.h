@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdbool.h>
+#include <limits.h>
 int _printf(const char *format, ...);
 int putchr(char z);
 int _puts(char *string);
