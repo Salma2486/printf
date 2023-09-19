@@ -8,6 +8,6 @@ char *print_int(int n)
 {
 	static char str[BUFF_SIZE];
 
-	sprintf(buffer, % d, n);
+	sprintf(buffer, "%d", n);
 	return (buffer);
 }
